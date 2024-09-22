@@ -1,0 +1,127 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnmp8uentt5m6"]
+
+[ext_resource type="Script" path="res://level_selection.gd" id="1_jhnoc"]
+
+[node name="lvl_selection" type="Node2D"]
+script = ExtResource("1_jhnoc")
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 74.0
+offset_top = 104.0
+offset_right = 155.0
+offset_bottom = 180.0
+text = "1"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 203.0
+offset_top = 104.0
+offset_right = 284.0
+offset_bottom = 180.0
+text = "2"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 336.0
+offset_top = 104.0
+offset_right = 417.0
+offset_bottom = 180.0
+text = "3"
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 465.0
+offset_top = 104.0
+offset_right = 546.0
+offset_bottom = 180.0
+text = "4"
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 604.0
+offset_top = 104.0
+offset_right = 685.0
+offset_bottom = 180.0
+text = "5"
+
+[node name="Button6" type="Button" parent="."]
+offset_left = 733.0
+offset_top = 104.0
+offset_right = 814.0
+offset_bottom = 180.0
+text = "6"
+
+[node name="Button7" type="Button" parent="."]
+offset_left = 866.0
+offset_top = 104.0
+offset_right = 947.0
+offset_bottom = 180.0
+text = "7"
+
+[node name="Button8" type="Button" parent="."]
+offset_left = 995.0
+offset_top = 104.0
+offset_right = 1076.0
+offset_bottom = 180.0
+text = "8"
+
+[node name="Button9" type="Button" parent="."]
+offset_left = 74.0
+offset_top = 328.0
+offset_right = 155.0
+offset_bottom = 404.0
+text = "9"
+
+[node name="Button10" type="Button" parent="."]
+offset_left = 203.0
+offset_top = 328.0
+offset_right = 284.0
+offset_bottom = 404.0
+text = "10"
+
+[node name="Button11" type="Button" parent="."]
+offset_left = 336.0
+offset_top = 328.0
+offset_right = 417.0
+offset_bottom = 404.0
+text = "11"
+
+[node name="Button12" type="Button" parent="."]
+offset_left = 465.0
+offset_top = 328.0
+offset_right = 546.0
+offset_bottom = 404.0
+text = "12"
+
+[node name="Button13" type="Button" parent="."]
+offset_left = 604.0
+offset_top = 328.0
+offset_right = 685.0
+offset_bottom = 404.0
+text = "13"
+
+[node name="Button14" type="Button" parent="."]
+offset_left = 733.0
+offset_top = 328.0
+offset_right = 814.0
+offset_bottom = 404.0
+text = "14"
+
+[node name="Button15" type="Button" parent="."]
+offset_left = 866.0
+offset_top = 328.0
+offset_right = 947.0
+offset_bottom = 404.0
+text = "15"
+
+[node name="bonus-button" type="Button" parent="."]
+offset_left = 538.0
+offset_top = 476.0
+offset_right = 619.0
+offset_bottom = 552.0
+text = "Bonus"
+
+[node name="back-button" type="Button" parent="."]
+offset_left = 74.0
+offset_top = 486.0
+offset_right = 155.0
+offset_bottom = 562.0
+text = "Back"
+
+[connection signal="pressed" from="back-button" to="." method="_on_backbutton_pressed"]

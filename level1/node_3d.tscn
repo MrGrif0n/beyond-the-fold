@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwkvlgqtx2kav"]
+
+[sub_resource type="GDScript" id="GDScript_5gsvu"]
+script/source = "extends Camera3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_crtuu"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, -0.387516, 0.921863, 0, 0.921863, 0.387516, -1, 1.69388e-08, -4.02959e-08, 229.187, 196.48, -329.999)
+current = true
+fov = 96.0
+script = SubResource("GDScript_5gsvu")
+
+[node name="Paper" type="MeshInstance3D" parent="."]
+transform = Transform3D(53.5526, 0, 0, 0, 17.5055, 0, 0, 0, 334.432, 0, 0, -332.964)
+mesh = SubResource("PlaneMesh_crtuu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.317851, 0.948141, 0, -0.948141, -0.317851, 131.621, 194.506, -347.61)
