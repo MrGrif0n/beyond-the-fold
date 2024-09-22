@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwkvlgqtx2kav"]
+[gd_scene load_steps=5 format=3 uid="uid://dwkvlgqtx2kav"]
+
+[ext_resource type="Script" path="res://level1/paper.gd" id="2_5fexe"]
 
 [sub_resource type="GDScript" id="GDScript_5gsvu"]
 script/source = "extends Camera3D
@@ -16,17 +18,27 @@ func _process(delta: float) -> void:
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_crtuu"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d7omu"]
+cull_mode = 2
+no_depth_test = true
+backlight_enabled = true
+backlight = Color(1, 1, 1, 1)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, -0.387516, 0.921863, 0, 0.921863, 0.387516, -1, 1.69388e-08, -4.02959e-08, 229.187, 196.48, -329.999)
+transform = Transform3D(-4.37114e-08, -0.387516, 0.921863, 0, 0.921863, 0.387516, -1, 1.69389e-08, -4.02959e-08, 229.187, 196.48, -329.999)
+top_level = true
 current = true
 fov = 96.0
 script = SubResource("GDScript_5gsvu")
 
 [node name="Paper" type="MeshInstance3D" parent="."]
 transform = Transform3D(53.5526, 0, 0, 0, 17.5055, 0, 0, 0, 334.432, 0, 0, -332.964)
+cast_shadow = 0
 mesh = SubResource("PlaneMesh_crtuu")
+surface_material_override/0 = SubResource("StandardMaterial3D_d7omu")
+script = ExtResource("2_5fexe")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.317851, 0.948141, 0, -0.948141, -0.317851, 131.621, 194.506, -347.61)
